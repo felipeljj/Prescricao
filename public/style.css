@@ -1,7 +1,42 @@
+/* style.css */
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 500;
-    padding: 0;
-    background-color: #ffffff;
-  }
-  
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%; /* Ajuste para a largura desejada */
+  max-width: 400px; /* Ajuste para a largura máxima desejada */
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px; /* Ajuste a largura conforme necessário */
+}
+
+.form input,
+.form button {
+  margin: 5px 0;
+  padding: 10px; /* Ajuste para o padding desejado */
+  width: calc(100% - 20px); /* Subtrai o padding para manter a largura correta */
+  box-sizing: border-box; /* Garante que o padding não adicione largura extra */
+}
+
+.titulo-cadastro {
+  text-align: center;
+  font-size: 32px; /* Ajuste o tamanho da fonte conforme necessário */
+  margin-top: 20px; /* Ajuste o espaçamento conforme necessário */
+  /* Outros estilos que você deseja aplicar ao título */
+}
