@@ -40,3 +40,33 @@ body {
   margin-top: 20px; /* Ajuste o espaçamento conforme necessário */
   /* Outros estilos que você deseja aplicar ao título */
 }
+
+/*Regras para estilização da busca de pesquisa do SELECT2*/
+
+/* Estilização do Select2 para cor de fonte preta */
+.select2-container--default .select2-selection--single {
+  background-color: #fff; /* Fundo branco */
+  border: 1px solid #aaa; /* Borda cinza */
+  border-radius: 4px; /* Bordas arredondadas */
+}
+
+/* Cor do texto dentro do campo de busca */
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  color: #000; /* Cor da fonte preta */
+  line-height: 28px; /* Altura da linha para centralizar verticalmente o texto */
+}
+
+/* Cor do placeholder */
+.select2-container--default .select2-selection--single .select2-selection__placeholder {
+  color: #000; /* Cor da fonte preta */
+}
+
+/* Cor do texto da opção selecionada */
+.select2-container--default .select2-selection--single .select2-selection__choice {
+  color: #000; /* Cor da fonte preta */
+}
+
+/* Cor do texto nas opções do dropdown */
+.select2-container--default .select2-results__option {
+  color: #000; /* Cor da fonte preta */
+}

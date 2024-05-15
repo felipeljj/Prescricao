@@ -48,6 +48,22 @@ app.post('/login', (req, res) => {
   });
 });
 
+// serve.js
+app.get('/buscar-medicamentos', (req, res) => {
+  const termoBusca = req.query.termo;
+  // Aqui você faria a busca no banco de dados
+  // Por exemplo:
+  db.query('SELECT nome, dose, posologia FROM Medicamento WHERE nome LIKE ?', [`%${termoBusca}%`], (error, results) => {
+    if (error) {
+      res.json({ error: 'Erro ao buscar medicamentos.' });
+    } else {
+      // Envie os resultados de volta para o cliente
+      res.json(results);
+    }
+  });
+});
+
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Servidor rodando na porta ${PORT}`);

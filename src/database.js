@@ -3,7 +3,7 @@
 const mysql = require('mysql2');
 
 const connection = mysql.createConnection({
-  host: 'localhost', // ou o endereço IP do seu servidor MySQL
+  host: '25.7.233.22', // ou o endereço IP do seu servidor MySQL
   user: 'root', // seu usuário do MySQL
   password: 'FelipeGabi123', // sua senha do MySQL
   database: 'sistema' // o nome do seu banco de dados
