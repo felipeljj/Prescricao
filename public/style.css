@@ -1,13 +1,5 @@
 /* style.css */
 body {
-<<<<<<< Updated upstream
-    font-family: 'Arial', sans-serif;
-    margin: 500;
-    padding: 0;
-    background-color: #ffffff;
-  }
-  
-=======
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
@@ -48,4 +40,3 @@ body {
   margin-top: 20px; /* Ajuste o espaçamento conforme necessário */
   /* Outros estilos que você deseja aplicar ao título */
 }
->>>>>>> Stashed changes
