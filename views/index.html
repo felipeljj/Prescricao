@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gerador de Receita Médica</title>
+    <title>Receita Médica</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
      <!-- Inclua a biblioteca jsPDF -->
      <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
      
+<<<<<<< Updated upstream
     <h1>Gerador de Receita Médica</h1>
     <form id="prescription-form">
         <label for="patient-name">Nome do Paciente:</label>
@@ -27,5 +27,28 @@
     </form>
 
     <script src="script.js"></script>
+=======
+    <div class="container">
+        <h1>Receita Médica</h1>
+        <form id="prescription-form" class='form'>
+            <label for="patient-name">Nome do Paciente:</label>
+            <input type="text" id="patient-name" name="patient-name" required>
+            <br><br>
+            <label for="medicine">Selecione o Medicamento:</label>
+            <select id="medicine" name="medicine">
+                <option value="med1">Atorvastatina 40mg - noite</option>
+                <option value="med2">Atorvastatina 40mg - Dia</option>
+                <!-- Adicione mais opções de medicamentos aqui -->
+            </select>
+            <br><br>
+            <input type="submit" value="Gerar Receita">
+            <!--Botão para sair-->
+            </form>
+            <a href="/">
+                <button type="button">Sair</button>
+            </a>
+    </div>
+<script src="script.js"></script>
+>>>>>>> Stashed changes
 </body>
 </html>
