@@ -8,7 +8,7 @@ app.use(express.static('public'));
 
 //pagina inicial, que é a pagina de login
 app.get('/', (req, res) => {
-<<<<<<< Updated upstream
+
   res.sendFile('index.html', { root: './views' });
 =======
   res.sendFile('login.html', {root: './views'})
@@ -49,8 +49,10 @@ app.post('/login', (req, res) => {
       res.redirect('/');
     }
   });
->>>>>>> Stashed changes
-});
+
+=======
+  res.sendFile('login.html', { root: './views' });
+
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
