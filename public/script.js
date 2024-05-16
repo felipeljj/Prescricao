@@ -4,35 +4,6 @@ document.getElementById('prescription-form').onsubmit = function(event) {
     event.preventDefault();
    gerarPDF();
   };
-
-// Inicializa o Select2
-$(document).ready(function() {
-    $('#medicine-search').select2({
-      ajax: {
-        url: '/buscar-medicamentos', // A rota no servidor que retorna os medicamentos
-        dataType: 'json',
-        delay: 250, // Espera 250ms após a última tecla pressionada para enviar a busca
-        data: function (params) {
-          return {
-            termo: params.term // O termo de busca que o usuário digitou
-          };
-        },
-        processResults: function (data) {
-          // Transforma os dados recebidos do servidor em um formato que o Select2 pode entender
-          return {
-            results: data.map(function(medicamento) {
-              return { id: medicamento.nome, text: medicamento.nome + ' ' + medicamento.dose + ' ' + medicamento.posologia };
-            })
-          };
-        },
-        cache: true
-      },
-      placeholder: 'Digite o nome do medicamento', // Placeholder para o campo de busca
-      minimumInputLength: 1, // Usuário deve digitar pelo menos 1 caractere para iniciar a busca
-      templateResult: formatMedicine, // Função para formatar os resultados da busca
-      templateSelection: formatMedicineSelection // Função para formatar o medicamento selecionado
-    });
-  });
   
 function gerarPDF() {
     // Captura os valores do formulário
@@ -64,20 +35,3 @@ function gerarPDF() {
     // Salva o PDF gerado
     doc.save('receita-medica.pdf');
 }
-
-function formatMedicine (medicamento) {
-    if (medicamento.loading) {
-      return medicamento.text;
-    }
-    var $container = $("<div class='select2-result-medicine clearfix'>" +
-      "<div class='select2-result-medicine__title'></div>" +
-      "</div>"
-    );
-    $container.find(".select2-result-medicine__title").text(medicamento.text);
-    return $container;
-  }
-  
-  function formatMedicineSelection (medicamento) {
-    return medicamento.text || medicamento.id;
-  }
-

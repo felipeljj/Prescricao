@@ -4,30 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Receita Médica</title>
-    <!-- Carregar jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- Adicione o Select2 CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Receita Médica</h1>
-        <form id="prescription-form">
-            <label for="patient-name">Nome do Paciente:</label>
-            <input type="text" id="patient-name" name="patient-name" required>
-            <br><br>
-            <!-- Campo de busca de medicamentos -->
-            <select id="medicine-search" style="width: 100%"></select>
-            <br><br>
-            <input type="submit" value="Gerar Receita">
-        </form>
+     <!-- Inclua a biblioteca jsPDF -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+     <div class="container">
+    <h1>Receita Médica</h1>
+    <form id="prescription-form">
+        <label for="patient-name">Nome do Paciente:</label>
+        <input type="text" id="patient-name" name="patient-name" required>
+        <br><br>
+        <label for="medicine">Selecione o Medicamento:</label>
+        <select id="medicine" name="medicine">
+            <option value="med1">Atorvastatina 40mg - noite</option>
+            <option value="med2">Atorvastatina 40mg - Dia</option>
+            <!-- Adicione mais opções de medicamentos aqui -->
+        </select>
+        <br><br>
+        <input type="submit" value="Gerar Receita">
+       
+
+    </form>
     </div>
-    <!-- Adicione o Select2 JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
-    <!-- Inclua a biblioteca jsPDF -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
-    <!-- Seu script personalizado -->
     <script src="script.js"></script>
 </body>
 </html>
